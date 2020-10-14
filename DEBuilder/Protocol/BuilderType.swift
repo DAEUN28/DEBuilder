@@ -7,8 +7,8 @@
 
 import Foundation
 
-protocol BuilderType {
-    associatedtype Product
-    
-    func build() -> Product
+public protocol BuilderType {
+  associatedtype Product
+  
+  func build() -> Product
 }

@@ -7,23 +7,69 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BFF090792534972800EDB30A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF090782534972800EDB30A /* AppDelegate.swift */; };
-		BFF090802534972800EDB30A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFF0907E2534972800EDB30A /* Main.storyboard */; };
-		BFF090852534972B00EDB30A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFF090832534972B00EDB30A /* LaunchScreen.storyboard */; };
+		BF9FE3B2253743A700FD563A /* UIView+DEBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FE3B1253743A700FD563A /* UIView+DEBuilder.swift */; };
+		BF9FE3BC2537483500FD563A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FE3BB2537483500FD563A /* AppDelegate.swift */; };
 		BFF09094253498AC00EDB30A /* BuilderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF09093253498AC00EDB30A /* BuilderType.swift */; };
 		BFF090972534994200EDB30A /* ViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF090962534994200EDB30A /* ViewBuilder.swift */; };
 		BFF0909A25349E9D00EDB30A /* ButtonBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF0909925349E9D00EDB30A /* ButtonBuilder.swift */; };
+		BFF090A22535CF3200EDB30A /* ControlBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF090A12535CF3200EDB30A /* ControlBuilder.swift */; };
+		BFF090A62537292800EDB30A /* With.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF090A52537292800EDB30A /* With.swift */; };
+		BFF090A92537293200EDB30A /* NSObject+DEBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF090A82537293200EDB30A /* NSObject+DEBuilder.swift */; };
+		BFF090AD25372AE400EDB30A /* LabelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF090AC25372AE400EDB30A /* LabelBuilder.swift */; };
+		BFF090B025372B1700EDB30A /* ImageViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF090AF25372B1700EDB30A /* ImageViewBuilder.swift */; };
+		BFF090B325372B6800EDB30A /* StackViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF090B225372B6800EDB30A /* StackViewBuilder.swift */; };
+		BFF090B625372B7200EDB30A /* ScrollViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF090B525372B7200EDB30A /* ScrollViewBuilder.swift */; };
+		BFF090BB25372BAC00EDB30A /* ActivityIndicatorViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF090BA25372BAC00EDB30A /* ActivityIndicatorViewBuilder.swift */; };
+		BFF090BE25372BCB00EDB30A /* PickerViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF090BD25372BCB00EDB30A /* PickerViewBuilder.swift */; };
+		BFF090C125372BD300EDB30A /* ProgressViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF090C025372BD300EDB30A /* ProgressViewBuilder.swift */; };
+		BFF090C525372C3600EDB30A /* DatePickerViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF090C425372C3600EDB30A /* DatePickerViewBuilder.swift */; };
+		BFF090C925372C5000EDB30A /* PageControlBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF090C825372C5000EDB30A /* PageControlBuilder.swift */; };
+		BFF090CC25372C5900EDB30A /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF090CB25372C5900EDB30A /* SegmentedControl.swift */; };
+		BFF090CF25372C6500EDB30A /* SliderBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF090CE25372C6500EDB30A /* SliderBuilder.swift */; };
+		BFF090D225372C6D00EDB30A /* StepperBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF090D125372C6D00EDB30A /* StepperBuilder.swift */; };
+		BFF090D525372C7A00EDB30A /* SwitchBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF090D425372C7A00EDB30A /* SwitchBuilder.swift */; };
+		BFF090D925372C9300EDB30A /* TextFieldBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF090D825372C9300EDB30A /* TextFieldBuilder.swift */; };
+		BFF090DD25372CA000EDB30A /* TextViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF090DC25372CA000EDB30A /* TextViewBuilder.swift */; };
+		BFF090E125372CC800EDB30A /* SearchTextFieldBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF090E025372CC800EDB30A /* SearchTextFieldBuilder.swift */; };
+		BFF090E525372D1300EDB30A /* BarButtonItemBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF090E425372D1300EDB30A /* BarButtonItemBuilder.swift */; };
+		BFF090E825372D2C00EDB30A /* NavigationBarBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF090E725372D2C00EDB30A /* NavigationBarBuilder.swift */; };
+		BFF090EB25372D3300EDB30A /* SearchBarBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF090EA25372D3300EDB30A /* SearchBarBuilder.swift */; };
+		BFF090EE25372D3D00EDB30A /* ToolbarBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF090ED25372D3D00EDB30A /* ToolbarBuilder.swift */; };
+		BFF090F125372D5600EDB30A /* TabBarBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF090F025372D5600EDB30A /* TabBarBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF9FE3B1253743A700FD563A /* UIView+DEBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+DEBuilder.swift"; sourceTree = "<group>"; };
+		BF9FE3BB2537483500FD563A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFF090752534972800EDB30A /* DEBuilder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DEBuilder.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		BFF090782534972800EDB30A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BFF0907F2534972800EDB30A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		BFF090842534972B00EDB30A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFF090862534972B00EDB30A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFF09093253498AC00EDB30A /* BuilderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuilderType.swift; sourceTree = "<group>"; };
 		BFF090962534994200EDB30A /* ViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBuilder.swift; sourceTree = "<group>"; };
 		BFF0909925349E9D00EDB30A /* ButtonBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBuilder.swift; sourceTree = "<group>"; };
+		BFF090A12535CF3200EDB30A /* ControlBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlBuilder.swift; sourceTree = "<group>"; };
+		BFF090A52537292800EDB30A /* With.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = With.swift; sourceTree = "<group>"; };
+		BFF090A82537293200EDB30A /* NSObject+DEBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+DEBuilder.swift"; sourceTree = "<group>"; };
+		BFF090AC25372AE400EDB30A /* LabelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelBuilder.swift; sourceTree = "<group>"; };
+		BFF090AF25372B1700EDB30A /* ImageViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewBuilder.swift; sourceTree = "<group>"; };
+		BFF090B225372B6800EDB30A /* StackViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewBuilder.swift; sourceTree = "<group>"; };
+		BFF090B525372B7200EDB30A /* ScrollViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewBuilder.swift; sourceTree = "<group>"; };
+		BFF090BA25372BAC00EDB30A /* ActivityIndicatorViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorViewBuilder.swift; sourceTree = "<group>"; };
+		BFF090BD25372BCB00EDB30A /* PickerViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewBuilder.swift; sourceTree = "<group>"; };
+		BFF090C025372BD300EDB30A /* ProgressViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewBuilder.swift; sourceTree = "<group>"; };
+		BFF090C425372C3600EDB30A /* DatePickerViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewBuilder.swift; sourceTree = "<group>"; };
+		BFF090C825372C5000EDB30A /* PageControlBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControlBuilder.swift; sourceTree = "<group>"; };
+		BFF090CB25372C5900EDB30A /* SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
+		BFF090CE25372C6500EDB30A /* SliderBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderBuilder.swift; sourceTree = "<group>"; };
+		BFF090D125372C6D00EDB30A /* StepperBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperBuilder.swift; sourceTree = "<group>"; };
+		BFF090D425372C7A00EDB30A /* SwitchBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchBuilder.swift; sourceTree = "<group>"; };
+		BFF090D825372C9300EDB30A /* TextFieldBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldBuilder.swift; sourceTree = "<group>"; };
+		BFF090DC25372CA000EDB30A /* TextViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewBuilder.swift; sourceTree = "<group>"; };
+		BFF090E025372CC800EDB30A /* SearchTextFieldBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextFieldBuilder.swift; sourceTree = "<group>"; };
+		BFF090E425372D1300EDB30A /* BarButtonItemBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarButtonItemBuilder.swift; sourceTree = "<group>"; };
+		BFF090E725372D2C00EDB30A /* NavigationBarBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarBuilder.swift; sourceTree = "<group>"; };
+		BFF090EA25372D3300EDB30A /* SearchBarBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarBuilder.swift; sourceTree = "<group>"; };
+		BFF090ED25372D3D00EDB30A /* ToolbarBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarBuilder.swift; sourceTree = "<group>"; };
+		BFF090F025372D5600EDB30A /* TabBarBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,30 +102,25 @@
 		BFF090772534972800EDB30A /* DEBuilder */ = {
 			isa = PBXGroup;
 			children = (
-				BFF0908F2534979C00EDB30A /* Source */,
-				BFF090782534972800EDB30A /* AppDelegate.swift */,
-				BFF0907E2534972800EDB30A /* Main.storyboard */,
-				BFF090832534972B00EDB30A /* LaunchScreen.storyboard */,
+				BF9FE3BB2537483500FD563A /* AppDelegate.swift */,
 				BFF090862534972B00EDB30A /* Info.plist */,
+				BFF0909C25349EE600EDB30A /* Builder */,
+				BFF0909D25349EEF00EDB30A /* Extension */,
+				BFF090F425373E8B00EDB30A /* Protocol */,
 			);
 			path = DEBuilder;
-			sourceTree = "<group>";
-		};
-		BFF0908F2534979C00EDB30A /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				BFF0909D25349EEF00EDB30A /* Extension */,
-				BFF0909C25349EE600EDB30A /* Builder */,
-				BFF09093253498AC00EDB30A /* BuilderType.swift */,
-			);
-			path = Source;
 			sourceTree = "<group>";
 		};
 		BFF0909C25349EE600EDB30A /* Builder */ = {
 			isa = PBXGroup;
 			children = (
+				BFF090E325372CD200EDB30A /* Bars */,
+				BFF090B825372B8400EDB30A /* Container Views */,
+				BFF090B925372B9400EDB30A /* Content Views */,
+				BFF090C325372BDE00EDB30A /* Controls */,
+				BFF090DF25372CB000EDB30A /* Search Field */,
+				BFF090D725372C7E00EDB30A /* Text Views */,
 				BFF090962534994200EDB30A /* ViewBuilder.swift */,
-				BFF0909925349E9D00EDB30A /* ButtonBuilder.swift */,
 			);
 			path = Builder;
 			sourceTree = "<group>";
@@ -87,8 +128,84 @@
 		BFF0909D25349EEF00EDB30A /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				BFF090A82537293200EDB30A /* NSObject+DEBuilder.swift */,
+				BF9FE3B1253743A700FD563A /* UIView+DEBuilder.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		BFF090B825372B8400EDB30A /* Container Views */ = {
+			isa = PBXGroup;
+			children = (
+				BFF090B225372B6800EDB30A /* StackViewBuilder.swift */,
+				BFF090B525372B7200EDB30A /* ScrollViewBuilder.swift */,
+			);
+			path = "Container Views";
+			sourceTree = "<group>";
+		};
+		BFF090B925372B9400EDB30A /* Content Views */ = {
+			isa = PBXGroup;
+			children = (
+				BFF090BA25372BAC00EDB30A /* ActivityIndicatorViewBuilder.swift */,
+				BFF090AF25372B1700EDB30A /* ImageViewBuilder.swift */,
+				BFF090BD25372BCB00EDB30A /* PickerViewBuilder.swift */,
+				BFF090C025372BD300EDB30A /* ProgressViewBuilder.swift */,
+			);
+			path = "Content Views";
+			sourceTree = "<group>";
+		};
+		BFF090C325372BDE00EDB30A /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				BFF090A12535CF3200EDB30A /* ControlBuilder.swift */,
+				BFF0909925349E9D00EDB30A /* ButtonBuilder.swift */,
+				BFF090C425372C3600EDB30A /* DatePickerViewBuilder.swift */,
+				BFF090C825372C5000EDB30A /* PageControlBuilder.swift */,
+				BFF090CB25372C5900EDB30A /* SegmentedControl.swift */,
+				BFF090CE25372C6500EDB30A /* SliderBuilder.swift */,
+				BFF090D125372C6D00EDB30A /* StepperBuilder.swift */,
+				BFF090D425372C7A00EDB30A /* SwitchBuilder.swift */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
+		BFF090D725372C7E00EDB30A /* Text Views */ = {
+			isa = PBXGroup;
+			children = (
+				BFF090AC25372AE400EDB30A /* LabelBuilder.swift */,
+				BFF090D825372C9300EDB30A /* TextFieldBuilder.swift */,
+				BFF090DC25372CA000EDB30A /* TextViewBuilder.swift */,
+			);
+			path = "Text Views";
+			sourceTree = "<group>";
+		};
+		BFF090DF25372CB000EDB30A /* Search Field */ = {
+			isa = PBXGroup;
+			children = (
+				BFF090E025372CC800EDB30A /* SearchTextFieldBuilder.swift */,
+			);
+			path = "Search Field";
+			sourceTree = "<group>";
+		};
+		BFF090E325372CD200EDB30A /* Bars */ = {
+			isa = PBXGroup;
+			children = (
+				BFF090E425372D1300EDB30A /* BarButtonItemBuilder.swift */,
+				BFF090E725372D2C00EDB30A /* NavigationBarBuilder.swift */,
+				BFF090EA25372D3300EDB30A /* SearchBarBuilder.swift */,
+				BFF090F025372D5600EDB30A /* TabBarBuilder.swift */,
+				BFF090ED25372D3D00EDB30A /* ToolbarBuilder.swift */,
+			);
+			path = Bars;
+			sourceTree = "<group>";
+		};
+		BFF090F425373E8B00EDB30A /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				BFF090A52537292800EDB30A /* With.swift */,
+				BFF09093253498AC00EDB30A /* BuilderType.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,8 +265,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFF090852534972B00EDB30A /* LaunchScreen.storyboard in Resources */,
-				BFF090802534972800EDB30A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,33 +275,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFF090792534972800EDB30A /* AppDelegate.swift in Sources */,
+				BFF090EE25372D3D00EDB30A /* ToolbarBuilder.swift in Sources */,
+				BFF090A22535CF3200EDB30A /* ControlBuilder.swift in Sources */,
+				BFF090D925372C9300EDB30A /* TextFieldBuilder.swift in Sources */,
+				BFF090B325372B6800EDB30A /* StackViewBuilder.swift in Sources */,
+				BF9FE3BC2537483500FD563A /* AppDelegate.swift in Sources */,
+				BFF090A62537292800EDB30A /* With.swift in Sources */,
+				BFF090BB25372BAC00EDB30A /* ActivityIndicatorViewBuilder.swift in Sources */,
+				BFF090CF25372C6500EDB30A /* SliderBuilder.swift in Sources */,
+				BFF090C525372C3600EDB30A /* DatePickerViewBuilder.swift in Sources */,
+				BFF090C125372BD300EDB30A /* ProgressViewBuilder.swift in Sources */,
+				BFF090EB25372D3300EDB30A /* SearchBarBuilder.swift in Sources */,
 				BFF0909A25349E9D00EDB30A /* ButtonBuilder.swift in Sources */,
+				BFF090C925372C5000EDB30A /* PageControlBuilder.swift in Sources */,
+				BFF090F125372D5600EDB30A /* TabBarBuilder.swift in Sources */,
+				BFF090B025372B1700EDB30A /* ImageViewBuilder.swift in Sources */,
+				BF9FE3B2253743A700FD563A /* UIView+DEBuilder.swift in Sources */,
+				BFF090E525372D1300EDB30A /* BarButtonItemBuilder.swift in Sources */,
+				BFF090AD25372AE400EDB30A /* LabelBuilder.swift in Sources */,
+				BFF090A92537293200EDB30A /* NSObject+DEBuilder.swift in Sources */,
+				BFF090CC25372C5900EDB30A /* SegmentedControl.swift in Sources */,
 				BFF09094253498AC00EDB30A /* BuilderType.swift in Sources */,
+				BFF090E825372D2C00EDB30A /* NavigationBarBuilder.swift in Sources */,
+				BFF090E125372CC800EDB30A /* SearchTextFieldBuilder.swift in Sources */,
+				BFF090D525372C7A00EDB30A /* SwitchBuilder.swift in Sources */,
+				BFF090BE25372BCB00EDB30A /* PickerViewBuilder.swift in Sources */,
 				BFF090972534994200EDB30A /* ViewBuilder.swift in Sources */,
+				BFF090DD25372CA000EDB30A /* TextViewBuilder.swift in Sources */,
+				BFF090D225372C6D00EDB30A /* StepperBuilder.swift in Sources */,
+				BFF090B625372B7200EDB30A /* ScrollViewBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		BFF0907E2534972800EDB30A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BFF0907F2534972800EDB30A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		BFF090832534972B00EDB30A /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BFF090842534972B00EDB30A /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		BFF090872534972B00EDB30A /* Debug */ = {
@@ -240,7 +361,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -295,7 +416,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -308,7 +429,6 @@
 		BFF0908A2534972B00EDB30A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VY4FNTH9C6;
@@ -317,6 +437,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = daeun28.DEBuilder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -327,7 +448,6 @@
 		BFF0908B2534972B00EDB30A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VY4FNTH9C6;
@@ -336,6 +456,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = daeun28.DEBuilder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
