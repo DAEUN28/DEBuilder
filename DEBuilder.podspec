@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DEBuilder'
-  s.version          = '0.1.2'
+  s.version          = '0.1.3'
   s.swift_version    = '4.0'
   s.summary          = 'More simply create object'
 
@@ -14,6 +14,6 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '9.0'
 
-  s.source_files = 'DEBuilder/*.swift'
+  s.source_files = 'DEBuilder/**/*.swift'
   # s.frameworks = 'UIKit', 'MapKit'
 end
