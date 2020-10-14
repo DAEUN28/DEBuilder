@@ -1,7 +1,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DEBuilder'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
+  s.swift_version    = '4.0'
   s.summary          = 'More simply create object'
 
 

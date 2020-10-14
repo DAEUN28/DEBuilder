@@ -42,7 +42,6 @@
 		BF9FE3B1253743A700FD563A /* UIView+DEBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+DEBuilder.swift"; sourceTree = "<group>"; };
 		BF9FE3BB2537483500FD563A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFF090752534972800EDB30A /* DEBuilder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DEBuilder.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		BFF090862534972B00EDB30A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFF09093253498AC00EDB30A /* BuilderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuilderType.swift; sourceTree = "<group>"; };
 		BFF090962534994200EDB30A /* ViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBuilder.swift; sourceTree = "<group>"; };
 		BFF0909925349E9D00EDB30A /* ButtonBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBuilder.swift; sourceTree = "<group>"; };
@@ -103,7 +102,6 @@
 			isa = PBXGroup;
 			children = (
 				BF9FE3BB2537483500FD563A /* AppDelegate.swift */,
-				BFF090862534972B00EDB30A /* Info.plist */,
 				BFF0909C25349EE600EDB30A /* Builder */,
 				BFF0909D25349EEF00EDB30A /* Extension */,
 				BFF090F425373E8B00EDB30A /* Protocol */,
