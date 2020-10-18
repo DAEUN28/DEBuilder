@@ -39,7 +39,9 @@ public class ViewBuilder<Element: UIView>: BuilderType {
   private var spread: CGFloat = 0
   private var sublayers: [CALayer] = []
 
-  // MARK: BuilderType
+  // MARK: Initalize
+
+  public init() { }
 
   public func build() -> Element {
     let element = Element(frame: frame)

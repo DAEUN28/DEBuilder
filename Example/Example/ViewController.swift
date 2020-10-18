@@ -6,13 +6,14 @@
 //
 
 import UIKit
+import DEBuilder
 
 class ViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    let buttont = 
+    let buttont = ViewBuilder<UIButton>()
   }
 
 
