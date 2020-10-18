@@ -83,108 +83,108 @@ public class ViewBuilder<Element: UIView>: BuilderType {
 
   // MARK: Builder Method
 
-  func withFrame(_ frame: CGRect) -> ViewBuilder {
+  public func withFrame(_ frame: CGRect) -> ViewBuilder {
     self.frame = frame
     return self
   }
 
-  func withBackgroundColor(_ color: UIColor?) -> ViewBuilder {
+  public func withBackgroundColor(_ color: UIColor?) -> ViewBuilder {
     self.backgroundColor = color
     return self
   }
 
-  func withHidden(_ isHidden: Bool) -> ViewBuilder {
+  public func withHidden(_ isHidden: Bool) -> ViewBuilder {
     self.isHidden = isHidden
     return self
   }
 
-  func withAlpha(_ alpha: CGFloat) -> ViewBuilder {
+  public func withAlpha(_ alpha: CGFloat) -> ViewBuilder {
     self.alpha = alpha
     return self
   }
 
-  func withOpaque(_ isOpaque: Bool) -> ViewBuilder {
+  public func withOpaque(_ isOpaque: Bool) -> ViewBuilder {
     self.isOpaque = isOpaque
     return self
   }
 
-  func withTintColor(_ color: UIColor?) -> ViewBuilder {
+  public func withTintColor(_ color: UIColor?) -> ViewBuilder {
     self.tintColor = color
     return self
   }
 
-  func withClipsToBounds(_ clipsToBounds: Bool) -> ViewBuilder {
+  public func withClipsToBounds(_ clipsToBounds: Bool) -> ViewBuilder {
     self.clipsToBounds = clipsToBounds
     return self
   }
 
-  func withUserInteractionEnabled(_ isEnabled: Bool) -> ViewBuilder {
+  public func withUserInteractionEnabled(_ isEnabled: Bool) -> ViewBuilder {
     self.isUserInteractionEnabled = isEnabled
     return self
   }
 
-  func withMultipleTouchEnabled(_ isEnabled: Bool) -> ViewBuilder {
+  public func withMultipleTouchEnabled(_ isEnabled: Bool) -> ViewBuilder {
     self.isMultipleTouchEnabled = isEnabled
     return self
   }
 
-  func withContentMode(_ mode: UIView.ContentMode) -> ViewBuilder {
+  public func withContentMode(_ mode: UIView.ContentMode) -> ViewBuilder {
     self.contentMode = mode
     return self
   }
 
-  func withTranslatesAutoresizingMaskIntoConstraints(_ isEnabled: Bool) -> ViewBuilder {
+  public func withTranslatesAutoresizingMaskIntoConstraints(_ isEnabled: Bool) -> ViewBuilder {
     self.translatesAutoresizingMaskIntoConstraints = isEnabled
     return self
   }
 
-  func disableTranlatesAutoresizing() -> ViewBuilder {
+  public func disableTranlatesAutoresizing() -> ViewBuilder {
     self.translatesAutoresizingMaskIntoConstraints = false
     return self
   }
 
-  func withSemanticContentAttribute(_ attribute: UISemanticContentAttribute) -> ViewBuilder {
+  public func withSemanticContentAttribute(_ attribute: UISemanticContentAttribute) -> ViewBuilder {
     self.semanticContentAttribute = attribute
     return self
   }
 
-  func withGestureRecognizers(_ gestureRecognizers: [UIGestureRecognizer]?) -> ViewBuilder {
+  public func withGestureRecognizers(_ gestureRecognizers: [UIGestureRecognizer]?) -> ViewBuilder {
     self.gestureRecognizers = gestureRecognizers
     return self
   }
 
-  func withTag(_ tag: Int) -> ViewBuilder {
+  public func withTag(_ tag: Int) -> ViewBuilder {
     self.tag = tag
     return self
   }
 
-  func withSubviews(_ views: [UIView]) -> ViewBuilder {
+  public func withSubviews(_ views: [UIView]) -> ViewBuilder {
     self.subviews = views
     return self
   }
 
-  func withSublayers(_ layers: [CALayer]) -> ViewBuilder {
+  public func withSublayers(_ layers: [CALayer]) -> ViewBuilder {
     self.sublayers = layers
     return self
   }
 
-  func withCornerRadius(_ radius: CGFloat, maskedCorners: CACornerMask? = nil) -> ViewBuilder {
+  public func withCornerRadius(_ radius: CGFloat, maskedCorners: CACornerMask? = nil) -> ViewBuilder {
     self.cornerRadius = radius
     self.maskedCorners = maskedCorners
     return self
   }
 
-  func withBorderWidth(_ width: CGFloat) -> ViewBuilder {
+  public func withBorderWidth(_ width: CGFloat) -> ViewBuilder {
     self.borderWidth = width
     return self
   }
 
-  func withBorderColor(_ color: UIColor?) -> ViewBuilder {
+  public func withBorderColor(_ color: UIColor?) -> ViewBuilder {
     self.borderColor = color
     return self
   }
 
-  func withShadow(_ color: UIColor? = nil,
+  public func withShadow(_ color: UIColor? = nil,
                   alpha: Float = 0.5,
                   x: CGFloat = 0,
                   y: CGFloat = 2,

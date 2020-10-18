@@ -36,34 +36,34 @@ public class ControlBuilder<Element: UIControl>: ViewBuilder<Element> {
 
   // MARK: Builder Method
 
-  func withEnabled(_ isEnabled: Bool) -> ControlBuilder {
+  public func withEnabled(_ isEnabled: Bool) -> ControlBuilder {
     self.isEnabled = isEnabled
     return self
   }
 
-  func withSelected(_ isSelected: Bool) -> ControlBuilder {
+  public func withSelected(_ isSelected: Bool) -> ControlBuilder {
     self.isSelected = isSelected
     return self
   }
 
-  func withHighlighted(_ isHighlighted: Bool) -> ControlBuilder {
+  public func withHighlighted(_ isHighlighted: Bool) -> ControlBuilder {
     self.isHighlighted = isHighlighted
     return self
   }
 
-  func withContentVerticalAlignment(_ alignment: UIControl.ContentVerticalAlignment)
+  public func withContentVerticalAlignment(_ alignment: UIControl.ContentVerticalAlignment)
   -> ControlBuilder {
     self.contentVerticalAlignment = alignment
     return self
   }
 
-  func withContentHorizontalAlignment(_ alignment: UIControl.ContentHorizontalAlignment)
+  public func withContentHorizontalAlignment(_ alignment: UIControl.ContentHorizontalAlignment)
   -> ControlBuilder {
     self.contentHorizontalAlignment = alignment
     return self
   }
 
-  func withTargets(_ targets: [Target]) -> ControlBuilder {
+  public func withTargets(_ targets: [Target]) -> ControlBuilder {
     self.targets = targets
     return self
   }

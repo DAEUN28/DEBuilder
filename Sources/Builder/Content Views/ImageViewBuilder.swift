@@ -34,37 +34,37 @@ public class ImageViewBuilder<Element: UIImageView>: ViewBuilder<Element> {
 
   // MARK: Builder Method
 
-  func withImage(_ image: UIImage?) -> ImageViewBuilder {
+  public func withImage(_ image: UIImage?) -> ImageViewBuilder {
     self.image = image
     return self
   }
 
-  func withHighlightedImage(_ image: UIImage?) -> ImageViewBuilder {
+  public func withHighlightedImage(_ image: UIImage?) -> ImageViewBuilder {
     self.highlightedImage = image
     return self
   }
 
-  func withAnimationImages(_ images: [UIImage]?) -> ImageViewBuilder {
+  public func withAnimationImages(_ images: [UIImage]?) -> ImageViewBuilder {
     self.animationImages = images
     return self
   }
 
-  func withHighlightedAnimationImagess(_ images: [UIImage]?) -> ImageViewBuilder {
+  public func withHighlightedAnimationImagess(_ images: [UIImage]?) -> ImageViewBuilder {
     self.highlightedAnimationImages = images
     return self
   }
 
-  func withAnimationDuration(_ duration: TimeInterval) -> ImageViewBuilder {
+  public func withAnimationDuration(_ duration: TimeInterval) -> ImageViewBuilder {
     self.animationDuration = duration
     return self
   }
 
-  func withAnimationRepeatCount(_ count: Int) -> ImageViewBuilder {
+  public func withAnimationRepeatCount(_ count: Int) -> ImageViewBuilder {
     self.animationRepeatCount = count
     return self
   }
 
-  func withHighlighted(_ isHighlighted: Bool) -> ImageViewBuilder {
+  public func withHighlighted(_ isHighlighted: Bool) -> ImageViewBuilder {
     self.isHighlighted = isHighlighted
     return self
   }

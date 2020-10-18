@@ -30,27 +30,27 @@ public class SwitchBuilder<Element: UISwitch>: ControlBuilder<Element> {
 
   // MARK: Builder Method
   
-  func withOn(_ isOn: Bool) -> SwitchBuilder {
+  public func withOn(_ isOn: Bool) -> SwitchBuilder {
     self.isOn = isOn
     return self
   }
 
-  func withOnTintColor(_ color: UIColor?) -> SwitchBuilder {
+  public func withOnTintColor(_ color: UIColor?) -> SwitchBuilder {
     self.onTintColor = color
     return self
   }
 
-  func withThumbTintColor(_ color: UIColor?) -> SwitchBuilder {
+  public func withThumbTintColor(_ color: UIColor?) -> SwitchBuilder {
     self.thumbTintColor = color
     return self
   }
 
-  func withOnImage(_ image: UIImage?) -> SwitchBuilder {
+  public func withOnImage(_ image: UIImage?) -> SwitchBuilder {
     self.onImage = image
     return self
   }
 
-  func withOffImage(_ image: UIImage?) -> SwitchBuilder {
+  public func withOffImage(_ image: UIImage?) -> SwitchBuilder {
     self.offImage = image
     return self
   }

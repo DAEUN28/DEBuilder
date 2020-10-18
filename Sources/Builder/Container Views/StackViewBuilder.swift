@@ -39,42 +39,42 @@ public class StackViewBuilder<Element: UIStackView>: ViewBuilder<Element> {
 
   // MARK: Builder Method
 
-  func withArrangedSubviews(_ subviews: [UIView]) -> StackViewBuilder {
+  public func withArrangedSubviews(_ subviews: [UIView]) -> StackViewBuilder {
     self.arrangedSubview = subviews
     return self
   }
 
-  func withAlignment(_ alignment: UIStackView.Alignment) -> StackViewBuilder {
+  public func withAlignment(_ alignment: UIStackView.Alignment) -> StackViewBuilder {
     self.alignment = alignment
     return self
   }
 
-  func withAxis(_ axis: NSLayoutConstraint.Axis) -> StackViewBuilder {
+  public func withAxis(_ axis: NSLayoutConstraint.Axis) -> StackViewBuilder {
     self.axis = axis
     return self
   }
 
-  func withBaselineRelativeArrangement(_ isBaselineRelativeArrangement: Bool) -> StackViewBuilder {
+  public func withBaselineRelativeArrangement(_ isBaselineRelativeArrangement: Bool) -> StackViewBuilder {
     self.isBaselineRelativeArrangement = isBaselineRelativeArrangement
     return self
   }
 
-  func withDistribution(_ distribution: UIStackView.Distribution) -> StackViewBuilder {
+  public func withDistribution(_ distribution: UIStackView.Distribution) -> StackViewBuilder {
     self.distribution = distribution
     return self
   }
 
-  func withLayoutMarginsRelativeArrangement(_ isLayoutMarginsRelativeArrangement: Bool) -> StackViewBuilder {
+  public func withLayoutMarginsRelativeArrangement(_ isLayoutMarginsRelativeArrangement: Bool) -> StackViewBuilder {
     self.isLayoutMarginsRelativeArrangement = isLayoutMarginsRelativeArrangement
     return self
   }
 
-  func withSpacing(_ spacing: CGFloat) -> StackViewBuilder {
+  public func withSpacing(_ spacing: CGFloat) -> StackViewBuilder {
     self.spacing = spacing
     return self
   }
 
-  func withCustomSpacing(_ customSpacing: [(CGFloat, UIView)]) -> StackViewBuilder {
+  public func withCustomSpacing(_ customSpacing: [(CGFloat, UIView)]) -> StackViewBuilder {
     self.customSpacing = customSpacing
     return self
   }

@@ -29,7 +29,7 @@ public class ButtonBuilder<Element: UIButton>: ViewBuilder<Element> {
 
   // MARK: BuilderType
 
-  public override func build() -> Element {
+  public override public func build() -> Element {
     let element = super.build()
       .with(\.reversesTitleShadowWhenHighlighted, setTo: reversesTitleShadowWhenHighlighted)
       .with(\.contentEdgeInsets, setTo: contentEdgeInsets)
@@ -52,63 +52,63 @@ public class ButtonBuilder<Element: UIButton>: ViewBuilder<Element> {
 
   // MARK: Builder Methods
 
-  func withTitle(_ title: States<String>) -> ButtonBuilder {
+  public func withTitle(_ title: States<String>) -> ButtonBuilder {
     self.title = title
     return self
   }
 
-  func withAttributedTitle(_ title: States<NSAttributedString>) -> ButtonBuilder {
+  public func withAttributedTitle(_ title: States<NSAttributedString>) -> ButtonBuilder {
     self.attributedTitle = title
     return self
   }
 
-  func withTitleColor(_ color: States<UIColor>) -> ButtonBuilder {
+  public func withTitleColor(_ color: States<UIColor>) -> ButtonBuilder {
     self.titleColor = color
     return self
   }
 
-  func withTitleShadowColor(_ color: States<UIColor>) -> ButtonBuilder {
+  public func withTitleShadowColor(_ color: States<UIColor>) -> ButtonBuilder {
     self.titleShadowColor = color
     return self
   }
 
-  func withReversesTitleShadowWhenHighlighted(_ reversesTitleShadowWhenHighlighted: Bool)
+  public func withReversesTitleShadowWhenHighlighted(_ reversesTitleShadowWhenHighlighted: Bool)
   -> ButtonBuilder {
     self.reversesTitleShadowWhenHighlighted = reversesTitleShadowWhenHighlighted
     return self
   }
 
-  func withImage(_ image: States<UIImage>) -> ButtonBuilder {
+  public func withImage(_ image: States<UIImage>) -> ButtonBuilder {
     self.image = image
     return self
   }
 
-  func withBackgroundImage(_ image: States<UIImage>) -> ButtonBuilder {
+  public func withBackgroundImage(_ image: States<UIImage>) -> ButtonBuilder {
     self.backgroundImage = image
     return self
   }
 
-  func withContentEdgeInsets(_ insets: UIEdgeInsets) -> ButtonBuilder {
+  public func withContentEdgeInsets(_ insets: UIEdgeInsets) -> ButtonBuilder {
     self.contentEdgeInsets = insets
     return self
   }
 
-  func withTitleEdgeInsets(_ insets: UIEdgeInsets) -> ButtonBuilder {
+  public func withTitleEdgeInsets(_ insets: UIEdgeInsets) -> ButtonBuilder {
     self.titleEdgeInsets = insets
     return self
   }
 
-  func withImageEdgeInsets(_ insets: UIEdgeInsets) -> ButtonBuilder {
+  public func withImageEdgeInsets(_ insets: UIEdgeInsets) -> ButtonBuilder {
     self.imageEdgeInsets = insets
     return self
   }
 
-  func withFont(_ font: UIFont?) -> ButtonBuilder {
+  public func withFont(_ font: UIFont?) -> ButtonBuilder {
     self.font = font
     return self
   }
 
-  func withTextAlignment(_ alignment: NSTextAlignment) -> ButtonBuilder {
+  public func withTextAlignment(_ alignment: NSTextAlignment) -> ButtonBuilder {
     self.textAlignment = alignment
     return self
   }

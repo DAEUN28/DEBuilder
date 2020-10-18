@@ -40,52 +40,52 @@ public class LabelBuilder<Element: UILabel>: ViewBuilder<Element> {
 
   // MARK: Builder Method
 
-  func withText(_ text: String?) -> LabelBuilder {
+  public func withText(_ text: String?) -> LabelBuilder {
     self.text = text
     return self
   }
 
-  func withAttributedText(_ text: NSAttributedString?) -> LabelBuilder {
+  public func withAttributedText(_ text: NSAttributedString?) -> LabelBuilder {
     self.attributedText = text
     return self
   }
 
-  func withFont(_ font: UIFont?) -> LabelBuilder {
+  public func withFont(_ font: UIFont?) -> LabelBuilder {
     self.font = font
     return self
   }
 
-  func withTextColor(_ color: UIColor?) -> LabelBuilder {
+  public func withTextColor(_ color: UIColor?) -> LabelBuilder {
     self.textColor = color
     return self
   }
 
-  func withTextAlignment(_ alignment: NSTextAlignment) -> LabelBuilder {
+  public func withTextAlignment(_ alignment: NSTextAlignment) -> LabelBuilder {
     self.textAlignment = alignment
     return self
   }
 
-  func withLineBreakMode(_ mode: NSLineBreakMode) -> LabelBuilder {
+  public func withLineBreakMode(_ mode: NSLineBreakMode) -> LabelBuilder {
     self.lineBreakMode = mode
     return self
   }
 
-  func withEnabled(_ isEnabled: Bool) -> LabelBuilder {
+  public func withEnabled(_ isEnabled: Bool) -> LabelBuilder {
     self.isEnabled = isEnabled
     return self
   }
 
-  func withAdjustFontSizeToFitWidth(_ adjustsFontSizeToFitWidth: Bool) -> LabelBuilder {
+  public func withAdjustFontSizeToFitWidth(_ adjustsFontSizeToFitWidth: Bool) -> LabelBuilder {
     self.adjustsFontSizeToFitWidth = adjustsFontSizeToFitWidth
     return self
   }
 
-  func withMinimumScaleFactor(_ scale: CGFloat) -> LabelBuilder {
+  public func withMinimumScaleFactor(_ scale: CGFloat) -> LabelBuilder {
     self.minimumScaleFactor = scale
     return self
   }
 
-  func withNumberOfLines(_ lines: Int) -> LabelBuilder {
+  public func withNumberOfLines(_ lines: Int) -> LabelBuilder {
     self.numberOfLines = lines
     return self
   }

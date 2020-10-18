@@ -65,104 +65,104 @@ public class TextFieldBuilder<Element: UITextField>: ControlBuilder<Element> {
 
   // MARK: Builder Methods
 
-  func withDelegate(_ delegate: UITextFieldDelegate) -> TextFieldBuilder {
+  public func withDelegate(_ delegate: UITextFieldDelegate) -> TextFieldBuilder {
     self.delegate = delegate
     return self
   }
 
-  func withText(_ text: String?) -> TextFieldBuilder {
+  public func withText(_ text: String?) -> TextFieldBuilder {
     self.text = text
     return self
   }
 
-  func withAttributedText(_ text: NSAttributedString?) -> TextFieldBuilder {
+  public func withAttributedText(_ text: NSAttributedString?) -> TextFieldBuilder {
     self.attributedText = text
     return self
   }
 
-  func withPlaceholder(_ text: String?) -> TextFieldBuilder {
+  public func withPlaceholder(_ text: String?) -> TextFieldBuilder {
     self.placeholder = text
     return self
   }
 
-  func withAttributedPlaceholder(_ text: NSAttributedString?) -> TextFieldBuilder {
+  public func withAttributedPlaceholder(_ text: NSAttributedString?) -> TextFieldBuilder {
     self.attributedPlaceholder = text
     return self
   }
 
-  func withFont(_ font: UIFont?) -> TextFieldBuilder {
+  public func withFont(_ font: UIFont?) -> TextFieldBuilder {
     self.font = font
     return self
   }
 
-  func withTextColor(_ color: UIColor?) -> TextFieldBuilder {
+  public func withTextColor(_ color: UIColor?) -> TextFieldBuilder {
     self.textColor = color
     return self
   }
 
-  func withTextAlignment(_ alignment: NSTextAlignment) -> TextFieldBuilder {
+  public func withTextAlignment(_ alignment: NSTextAlignment) -> TextFieldBuilder {
     self.textAlignment = alignment
     return self
   }
 
-  func withMinimumFontSize(_ size: CGFloat) -> TextFieldBuilder {
+  public func withMinimumFontSize(_ size: CGFloat) -> TextFieldBuilder {
     self.minimumFontSize = size
     return self
   }
 
-  func withClearsOnBeginEditing(_ clearsOnBeginEditing: Bool) -> TextFieldBuilder {
+  public func withClearsOnBeginEditing(_ clearsOnBeginEditing: Bool) -> TextFieldBuilder {
     self.clearsOnBeginEditing = clearsOnBeginEditing
     return self
   }
 
-  func withClearsOnInsertion(_ clearsOnInsertion: Bool) -> TextFieldBuilder {
+  public func withClearsOnInsertion(_ clearsOnInsertion: Bool) -> TextFieldBuilder {
     self.clearsOnInsertion = clearsOnInsertion
     return self
   }
 
-  func withBorderStyle(_ style: UITextField.BorderStyle) -> TextFieldBuilder {
+  public func withBorderStyle(_ style: UITextField.BorderStyle) -> TextFieldBuilder {
     self.borderStyle = style
     return self
   }
 
-  func withClearButtonMode(_ mode: UITextField.ViewMode) -> TextFieldBuilder {
+  public func withClearButtonMode(_ mode: UITextField.ViewMode) -> TextFieldBuilder {
     self.clearButtonMode = mode
     return self
   }
 
-  func withLeftView(_ view: UIView, mode: UITextField.ViewMode) -> TextFieldBuilder {
+  public func withLeftView(_ view: UIView, mode: UITextField.ViewMode) -> TextFieldBuilder {
     self.leftView = view
     self.leftViewMode = mode
     return self
   }
 
-  func withRightView(_ view: UIView, mode: UITextField.ViewMode) -> TextFieldBuilder {
+  public func withRightView(_ view: UIView, mode: UITextField.ViewMode) -> TextFieldBuilder {
     self.rightView = view
     self.rightViewMode = mode
     return self
   }
 
-  func withKeyboardType(_ type: UIKeyboardType) -> TextFieldBuilder {
+  public func withKeyboardType(_ type: UIKeyboardType) -> TextFieldBuilder {
     self.keyboardType = type
     return self
   }
 
-  func withKeyboardAppearance(_ appearance: UIKeyboardAppearance) -> TextFieldBuilder {
+  public func withKeyboardAppearance(_ appearance: UIKeyboardAppearance) -> TextFieldBuilder {
     self.keyboardAppearance = appearance
     return self
   }
 
-  func withTextContentType(_ type: UITextContentType?) -> TextFieldBuilder {
+  public func withTextContentType(_ type: UITextContentType?) -> TextFieldBuilder {
     self.textContentType = type
     return self
   }
 
-  func withEnablesReturnKeyAutomatically(_ isEnabled: Bool) -> TextFieldBuilder {
+  public func withEnablesReturnKeyAutomatically(_ isEnabled: Bool) -> TextFieldBuilder {
     self.enablesReturnKeyAutomatically = isEnabled
     return self
   }
 
-  func withReturnKeyType(_ type: UIReturnKeyType) -> TextFieldBuilder {
+  public func withReturnKeyType(_ type: UIReturnKeyType) -> TextFieldBuilder {
     self.returnKeyType = type
     return self
   }

@@ -21,7 +21,7 @@ public class BarButtonItemBuilder<Element: UIBarButtonItem>: BarItemBuilder<Elem
 
   // MARK: BuilderType
 
-  override public func build() -> Element {
+  override public build() -> Element {
     let element = super.build()
       .with(\.target, setTo: target)
       .with(\.action, setTo: action)
@@ -36,37 +36,37 @@ public class BarButtonItemBuilder<Element: UIBarButtonItem>: BarItemBuilder<Elem
 
   // MARK: Builder Method
 
-  func withTarget(_ target: AnyObject?) -> BarButtonItemBuilder {
+  public func withTarget(_ target: AnyObject?) -> BarButtonItemBuilder {
     self.target = target
     return self
   }
 
-  func withAction(_ action: Selector?) -> BarButtonItemBuilder {
+  public func withAction(_ action: Selector?) -> BarButtonItemBuilder {
     self.action = action
     return self
   }
 
-  func withStyle(_ style: UIBarButtonItem.Style) -> BarButtonItemBuilder {
+  public func withStyle(_ style: UIBarButtonItem.Style) -> BarButtonItemBuilder {
     self.style = style
     return self
   }
 
-  func withPossibleTitles(_ titles: Set<String>?) -> BarButtonItemBuilder {
+  public func withPossibleTitles(_ titles: Set<String>?) -> BarButtonItemBuilder {
     self.possibleTitles = titles
     return self
   }
 
-  func withWidth(_ width: CGFloat) -> BarButtonItemBuilder {
+  public func withWidth(_ width: CGFloat) -> BarButtonItemBuilder {
     self.width = width
     return self
   }
 
-  func withCustomView(_ view: UIView?) -> BarButtonItemBuilder {
+  public func withCustomView(_ view: UIView?) -> BarButtonItemBuilder {
     self.customView = view
     return self
   }
 
-  func withTintColor(_ color: UIColor?) -> BarButtonItemBuilder {
+  public func withTintColor(_ color: UIColor?) -> BarButtonItemBuilder {
     self.tintColor = color
     return self
   }

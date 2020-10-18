@@ -13,7 +13,7 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    let buttont = ViewBuilder<UIButton>()
+    let buttont = ViewBuilder<UIButton>().
   }
 
 

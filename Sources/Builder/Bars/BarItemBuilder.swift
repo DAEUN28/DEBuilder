@@ -30,27 +30,27 @@ public class BarItemBuilder<Element: UIBarItem>: BuilderType {
 
   // MARK: Builder Method
 
-  func withTitle(_ title: String?) -> BarItemBuilder {
+  public func withTitle(_ title: String?) -> BarItemBuilder {
     self.title = title
     return self
   }
 
-  func withImage(_ image: UIImage?) -> BarItemBuilder {
+  public func withImage(_ image: UIImage?) -> BarItemBuilder {
     self.image = image
     return self
   }
 
-  func withImageInsets(_ insets: UIEdgeInsets) -> BarItemBuilder {
+  public func withImageInsets(_ insets: UIEdgeInsets) -> BarItemBuilder {
     self.imageInsets = insets
     return self
   }
 
-  func withEnabled(_ isEnabled: Bool) -> BarItemBuilder {
+  public func withEnabled(_ isEnabled: Bool) -> BarItemBuilder {
     self.isEnabled = isEnabled
     return self
   }
 
-  func withTag(_ tag: Int) -> BarItemBuilder {
+  public func withTag(_ tag: Int) -> BarItemBuilder {
     self.tag = tag
     return self
   }
