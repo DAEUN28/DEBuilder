@@ -10,5 +10,5 @@ import Foundation
 public protocol BuilderType {
   associatedtype Product
   
-  public func build() -> Product
+  func build() -> Product
 }

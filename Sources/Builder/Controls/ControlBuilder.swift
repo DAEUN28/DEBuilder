@@ -9,7 +9,7 @@ import UIKit
 
 public class ControlBuilder<Element: UIControl>: ViewBuilder<Element> {
 
-  typealias Target = (Any?, Selector, UIControl.Event)
+  public typealias Target = (Any?, Selector, UIControl.Event)
 
   // MARK: Properties
 

@@ -9,7 +9,7 @@ import UIKit
 
 public class ButtonBuilder<Element: UIButton>: ViewBuilder<Element> {
 
-  typealias States<Element> = [(Element?, UIControl.State)]
+  public typealias States<Element> = [(Element?, UIControl.State)]
 
   // MARK: Propereties
 
@@ -29,7 +29,7 @@ public class ButtonBuilder<Element: UIButton>: ViewBuilder<Element> {
 
   // MARK: BuilderType
 
-  public override public func build() -> Element {
+  override public func build() -> Element {
     let element = super.build()
       .with(\.reversesTitleShadowWhenHighlighted, setTo: reversesTitleShadowWhenHighlighted)
       .with(\.contentEdgeInsets, setTo: contentEdgeInsets)

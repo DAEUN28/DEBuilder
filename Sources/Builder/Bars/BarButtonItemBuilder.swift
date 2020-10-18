@@ -21,7 +21,7 @@ public class BarButtonItemBuilder<Element: UIBarButtonItem>: BarItemBuilder<Elem
 
   // MARK: BuilderType
 
-  override public build() -> Element {
+  override public func build() -> Element {
     let element = super.build()
       .with(\.target, setTo: target)
       .with(\.action, setTo: action)
