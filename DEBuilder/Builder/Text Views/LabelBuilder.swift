@@ -17,23 +17,28 @@ public class LabelBuilder<Element: UILabel>: ViewBuilder<Element> {
   private var textColor: UIColor?
   private var textAlignment: NSTextAlignment = .natural
   private var lineBreakMode: NSLineBreakMode = .byTruncatingTail
-  private var numberOfLines: Int = 1
+  private var isEnabled = true
+  private var adjustsFontSizeToFitWidth = false
+  private var minimumScaleFactor: CGFloat = 0
+  private var numberOfLines = 1
 
   // MARK: BuilderType
 
   override public func build() -> Element {
-    let label = super.build()
-    label.text = text
-    if let text = attributedText { label.attributedText = text }
-    if let font = font { label.font = font }
-    label.textColor = textColor
-    label.textAlignment = textAlignment
-    label.lineBreakMode = lineBreakMode
-    label.numberOfLines = numberOfLines
-    return label
+    return super.build()
+      .with(\.text, setTo: text)
+      .with(\.attributedText, setTo: attributedText)
+      .with(\.font, setTo: font)
+      .with(\.textColor, setTo: textColor)
+      .with(\.textAlignment, setTo: textAlignment)
+      .with(\.lineBreakMode, setTo: lineBreakMode)
+      .with(\.isEnabled, setTo: isEnabled)
+      .with(\.adjustsFontSizeToFitWidth, setTo: adjustsFontSizeToFitWidth)
+      .with(\.minimumScaleFactor, setTo: minimumScaleFactor)
+      .with(\.numberOfLines, setTo: numberOfLines)
   }
 
-  // MARK: Builder Methods
+  // MARK: Builder Method
 
   func withText(_ text: String?) -> LabelBuilder {
     self.text = text
@@ -62,6 +67,21 @@ public class LabelBuilder<Element: UILabel>: ViewBuilder<Element> {
 
   func withLineBreakMode(_ mode: NSLineBreakMode) -> LabelBuilder {
     self.lineBreakMode = mode
+    return self
+  }
+
+  func withEnabled(_ isEnabled: Bool) -> LabelBuilder {
+    self.isEnabled = isEnabled
+    return self
+  }
+
+  func withAdjustFontSizeToFitWidth(_ adjustsFontSizeToFitWidth: Bool) -> LabelBuilder {
+    self.adjustsFontSizeToFitWidth = adjustsFontSizeToFitWidth
+    return self
+  }
+
+  func withMinimumScaleFactor(_ scale: CGFloat) -> LabelBuilder {
+    self.minimumScaleFactor = scale
     return self
   }
 

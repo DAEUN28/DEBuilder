@@ -9,57 +9,107 @@ import UIKit
 
 public class ButtonBuilder<Element: UIButton>: ViewBuilder<Element> {
 
+  typealias States<Element> = [(Element?, UIControl.State)]
+
   // MARK: Propereties
 
-  private var button = UIButton()
+  private var title: States<String> = []
+  private var attributedTitle: States<NSAttributedString> = []
+  private var titleColor: States<UIColor> = []
+  private var titleShadowColor: States<UIColor> = []
+  private var reversesTitleShadowWhenHighlighted = false
+  private var image: States<UIImage> = []
+  private var backgroundImage: States<UIImage> = []
+  private var contentEdgeInsets: UIEdgeInsets = .zero
+  private var titleEdgeInsets: UIEdgeInsets = .zero
+  private var imageEdgeInsets: UIEdgeInsets = .zero
+
+  private var font: UIFont?
+  private var textAlignment: NSTextAlignment = .natural
 
   // MARK: BuilderType
 
   public override func build() -> Element {
-    let button = super.build()
-    button.setTitle(self.button.title(for: .normal), for: .normal)
-    button.setTitle(self.button.title(for: .selected), for: .selected)
-    button.setAttributedTitle(self.button.attributedTitle(for: .normal), for: .normal)
-    button.setAttributedTitle(self.button.attributedTitle(for: .selected), for: .normal)
-    button.setTitleColor(self.button.titleColor(for: .normal), for: .normal)
-    button.setTitleColor(self.button.titleColor(for: .selected), for: .selected)
-    button.setImage(self.button.image(for: .normal), for: .normal)
-    button.setImage(self.button.image(for: .selected), for: .selected)
-    button.titleLabel?.font = self.button.titleLabel?.font
-    button.titleLabel?.textAlignment = self.button.titleLabel?.textAlignment ?? .natural
-    return button
+    let element = super.build()
+      .with(\.reversesTitleShadowWhenHighlighted, setTo: reversesTitleShadowWhenHighlighted)
+      .with(\.contentEdgeInsets, setTo: contentEdgeInsets)
+      .with(\.titleEdgeInsets, setTo: titleEdgeInsets)
+      .with(\.imageEdgeInsets, setTo: imageEdgeInsets)
+
+    for (title, state) in title { element.setTitle(title, for: state) }
+    for (title, state) in attributedTitle { element.setAttributedTitle(title, for: state) }
+    for (color, state) in titleColor { element.setTitleColor(color, for: state) }
+    for (color, state) in titleShadowColor { element.setTitleShadowColor(color, for: state) }
+    for (image, state) in image { element.setImage(image, for: state) }
+    for (image, state) in backgroundImage { element.setBackgroundImage(image, for: state) }
+
+    element.titleLabel?
+      .with(\.font, setTo: font)
+      .with(\.textAlignment, setTo: textAlignment)
+
+    return element
   }
 
   // MARK: Builder Methods
 
-  func withTitle(_ title: String?, for state: UIControl.State = .normal) -> ButtonBuilder {
-    button.setTitle(title, for: state)
+  func withTitle(_ title: States<String>) -> ButtonBuilder {
+    self.title = title
     return self
   }
 
-  func withAttributedTitle(_ title: NSAttributedString?,
-                           for state: UIControl.State = .normal) -> ButtonBuilder {
-    button.setAttributedTitle(title, for: state)
+  func withAttributedTitle(_ title: States<NSAttributedString>) -> ButtonBuilder {
+    self.attributedTitle = title
     return self
   }
 
-  func withTitleColor(_ color: UIColor?, for state: UIControl.State = .normal) -> ButtonBuilder {
-    button.setTitleColor(color, for: state)
+  func withTitleColor(_ color: States<UIColor>) -> ButtonBuilder {
+    self.titleColor = color
     return self
   }
 
-  func withImage(_ image: UIImage?, for state: UIControl.State = .normal) -> ButtonBuilder {
-    button.setImage(image, for: state)
+  func withTitleShadowColor(_ color: States<UIColor>) -> ButtonBuilder {
+    self.titleShadowColor = color
+    return self
+  }
+
+  func withReversesTitleShadowWhenHighlighted(_ reversesTitleShadowWhenHighlighted: Bool)
+  -> ButtonBuilder {
+    self.reversesTitleShadowWhenHighlighted = reversesTitleShadowWhenHighlighted
+    return self
+  }
+
+  func withImage(_ image: States<UIImage>) -> ButtonBuilder {
+    self.image = image
+    return self
+  }
+
+  func withBackgroundImage(_ image: States<UIImage>) -> ButtonBuilder {
+    self.backgroundImage = image
+    return self
+  }
+
+  func withContentEdgeInsets(_ insets: UIEdgeInsets) -> ButtonBuilder {
+    self.contentEdgeInsets = insets
+    return self
+  }
+
+  func withTitleEdgeInsets(_ insets: UIEdgeInsets) -> ButtonBuilder {
+    self.titleEdgeInsets = insets
+    return self
+  }
+
+  func withImageEdgeInsets(_ insets: UIEdgeInsets) -> ButtonBuilder {
+    self.imageEdgeInsets = insets
     return self
   }
 
   func withFont(_ font: UIFont?) -> ButtonBuilder {
-    button.titleLabel?.font = font
+    self.font = font
     return self
   }
 
   func withTextAlignment(_ alignment: NSTextAlignment) -> ButtonBuilder {
-    button.titleLabel?.textAlignment = alignment
+    self.textAlignment = alignment
     return self
   }
 }

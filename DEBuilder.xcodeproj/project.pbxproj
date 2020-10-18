@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BF9FE3B2253743A700FD563A /* UIView+DEBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FE3B1253743A700FD563A /* UIView+DEBuilder.swift */; };
-		BF9FE3BC2537483500FD563A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FE3BB2537483500FD563A /* AppDelegate.swift */; };
+		BF7FBACC253A05530044852B /* UIView+DEBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FBACB253A05530044852B /* UIView+DEBuilder.swift */; };
+		BF7FBACF253A06470044852B /* CALayer+DEBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FBACE253A06470044852B /* CALayer+DEBuilder.swift */; };
+		BF7FBAD2253AF7910044852B /* BarItemBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FBAD1253AF7910044852B /* BarItemBuilder.swift */; };
+		BF7FBAD5253C5C0E0044852B /* UIStackView+DEBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FBAD4253C5C0E0044852B /* UIStackView+DEBuilder.swift */; };
+		BF9FE3B2253743A700FD563A /* UIView+BuilderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FE3B1253743A700FD563A /* UIView+BuilderType.swift */; };
 		BFF09094253498AC00EDB30A /* BuilderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF09093253498AC00EDB30A /* BuilderType.swift */; };
 		BFF090972534994200EDB30A /* ViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF090962534994200EDB30A /* ViewBuilder.swift */; };
 		BFF0909A25349E9D00EDB30A /* ButtonBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF0909925349E9D00EDB30A /* ButtonBuilder.swift */; };
@@ -39,8 +42,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BF9FE3B1253743A700FD563A /* UIView+DEBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+DEBuilder.swift"; sourceTree = "<group>"; };
-		BF9FE3BB2537483500FD563A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BF7FBACB253A05530044852B /* UIView+DEBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+DEBuilder.swift"; sourceTree = "<group>"; };
+		BF7FBACE253A06470044852B /* CALayer+DEBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+DEBuilder.swift"; sourceTree = "<group>"; };
+		BF7FBAD1253AF7910044852B /* BarItemBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarItemBuilder.swift; sourceTree = "<group>"; };
+		BF7FBAD4253C5C0E0044852B /* UIStackView+DEBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+DEBuilder.swift"; sourceTree = "<group>"; };
+		BF9FE3B1253743A700FD563A /* UIView+BuilderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+BuilderType.swift"; sourceTree = "<group>"; };
 		BFF090752534972800EDB30A /* DEBuilder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DEBuilder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFF09093253498AC00EDB30A /* BuilderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuilderType.swift; sourceTree = "<group>"; };
 		BFF090962534994200EDB30A /* ViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBuilder.swift; sourceTree = "<group>"; };
@@ -101,7 +107,6 @@
 		BFF090772534972800EDB30A /* DEBuilder */ = {
 			isa = PBXGroup;
 			children = (
-				BF9FE3BB2537483500FD563A /* AppDelegate.swift */,
 				BFF0909C25349EE600EDB30A /* Builder */,
 				BFF0909D25349EEF00EDB30A /* Extension */,
 				BFF090F425373E8B00EDB30A /* Protocol */,
@@ -127,7 +132,10 @@
 			isa = PBXGroup;
 			children = (
 				BFF090A82537293200EDB30A /* NSObject+DEBuilder.swift */,
-				BF9FE3B1253743A700FD563A /* UIView+DEBuilder.swift */,
+				BF9FE3B1253743A700FD563A /* UIView+BuilderType.swift */,
+				BF7FBACB253A05530044852B /* UIView+DEBuilder.swift */,
+				BF7FBACE253A06470044852B /* CALayer+DEBuilder.swift */,
+				BF7FBAD4253C5C0E0044852B /* UIStackView+DEBuilder.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -193,6 +201,7 @@
 				BFF090EA25372D3300EDB30A /* SearchBarBuilder.swift */,
 				BFF090F025372D5600EDB30A /* TabBarBuilder.swift */,
 				BFF090ED25372D3D00EDB30A /* ToolbarBuilder.swift */,
+				BF7FBAD1253AF7910044852B /* BarItemBuilder.swift */,
 			);
 			path = Bars;
 			sourceTree = "<group>";
@@ -273,11 +282,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF7FBAD5253C5C0E0044852B /* UIStackView+DEBuilder.swift in Sources */,
 				BFF090EE25372D3D00EDB30A /* ToolbarBuilder.swift in Sources */,
 				BFF090A22535CF3200EDB30A /* ControlBuilder.swift in Sources */,
+				BF7FBAD2253AF7910044852B /* BarItemBuilder.swift in Sources */,
 				BFF090D925372C9300EDB30A /* TextFieldBuilder.swift in Sources */,
 				BFF090B325372B6800EDB30A /* StackViewBuilder.swift in Sources */,
-				BF9FE3BC2537483500FD563A /* AppDelegate.swift in Sources */,
+				BF7FBACF253A06470044852B /* CALayer+DEBuilder.swift in Sources */,
 				BFF090A62537292800EDB30A /* With.swift in Sources */,
 				BFF090BB25372BAC00EDB30A /* ActivityIndicatorViewBuilder.swift in Sources */,
 				BFF090CF25372C6500EDB30A /* SliderBuilder.swift in Sources */,
@@ -288,7 +299,8 @@
 				BFF090C925372C5000EDB30A /* PageControlBuilder.swift in Sources */,
 				BFF090F125372D5600EDB30A /* TabBarBuilder.swift in Sources */,
 				BFF090B025372B1700EDB30A /* ImageViewBuilder.swift in Sources */,
-				BF9FE3B2253743A700FD563A /* UIView+DEBuilder.swift in Sources */,
+				BF9FE3B2253743A700FD563A /* UIView+BuilderType.swift in Sources */,
+				BF7FBACC253A05530044852B /* UIView+DEBuilder.swift in Sources */,
 				BFF090E525372D1300EDB30A /* BarButtonItemBuilder.swift in Sources */,
 				BFF090AD25372AE400EDB30A /* LabelBuilder.swift in Sources */,
 				BFF090A92537293200EDB30A /* NSObject+DEBuilder.swift in Sources */,
@@ -431,6 +443,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VY4FNTH9C6;
 				INFOPLIST_FILE = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -450,6 +463,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VY4FNTH9C6;
 				INFOPLIST_FILE = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

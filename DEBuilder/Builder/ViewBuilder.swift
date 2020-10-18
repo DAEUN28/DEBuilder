@@ -9,7 +9,7 @@ import UIKit
 
 public class ViewBuilder<Element: UIView>: BuilderType {
 
-  // MARK: Properties
+  // MARK: Property
 
   private var frame: CGRect = .zero
   private var backgroundColor: UIColor?
@@ -25,12 +25,19 @@ public class ViewBuilder<Element: UIView>: BuilderType {
   private var semanticContentAttribute: UISemanticContentAttribute = .unspecified
   private var gestureRecognizers: [UIGestureRecognizer]? = []
   private var tag: Int = 0
-
   private var subviews: [UIView] = []
-  private var sublayers: [CALayer] = []
+
+  // layer
   private var cornerRadius: CGFloat = 0
+  private var maskedCorners: CACornerMask?
   private var borderWidth: CGFloat = 0
   private var borderColor: UIColor?
+  private var shadowOpacity: Float = 0
+  private var shadowRadius: CGFloat = 3
+  private var shadowOffset: CGSize = CGSize(width: 0, height: -3)
+  private var shadowColor: UIColor?
+  private var spread: CGFloat = 0
+  private var sublayers: [CALayer] = []
 
   // MARK: BuilderType
 
@@ -49,14 +56,26 @@ public class ViewBuilder<Element: UIView>: BuilderType {
       .with(\.semanticContentAttribute, setTo: semanticContentAttribute)
       .with(\.gestureRecognizers, setTo: gestureRecognizers)
       .with(\.tag, setTo: tag)
+    element.addSubviews(subviews)
 
-    for subview in subviews {
-      element.addSubview(subview)
+    // layer
+    element.layer
+      .with(\.cornerRadius, setTo: cornerRadius)
+      .with(\.maskedCorners, setTo: maskedCorners ?? CACornerMask())
+      .with(\.borderWidth, setTo: borderWidth)
+      .with(\.borderColor, setTo: borderColor?.cgColor)
+      .with(\.shadowOpacity, setTo: shadowOpacity)
+      .with(\.shadowRadius, setTo: shadowRadius)
+      .with(\.shadowOffset, setTo: shadowOffset)
+      .with(\.shadowColor, setTo: shadowColor?.cgColor)
+      .with(\.sublayers, setTo: sublayers)
+
+    if spread == 0 {
+      element.layer.shadowPath = nil
+    } else {
+      let rect = element.bounds.insetBy(dx: -spread, dy: -spread)
+      element.layer.shadowPath = UIBezierPath(rect: rect).cgPath
     }
-    element.layer.sublayers = sublayers
-    element.layer.cornerRadius = cornerRadius
-    element.layer.borderWidth = borderWidth
-    element.layer.borderColor = borderColor?.cgColor
     return element
   }
 
@@ -147,8 +166,9 @@ public class ViewBuilder<Element: UIView>: BuilderType {
     return self
   }
 
-  func withCornerRadius(_ radius: CGFloat) -> ViewBuilder {
+  func withCornerRadius(_ radius: CGFloat, maskedCorners: CACornerMask? = nil) -> ViewBuilder {
     self.cornerRadius = radius
+    self.maskedCorners = maskedCorners
     return self
   }
 
@@ -159,6 +179,21 @@ public class ViewBuilder<Element: UIView>: BuilderType {
 
   func withBorderColor(_ color: UIColor?) -> ViewBuilder {
     self.borderColor = color
+    return self
+  }
+
+  func withShadow(_ color: UIColor? = nil,
+                  alpha: Float = 0.5,
+                  x: CGFloat = 0,
+                  y: CGFloat = 2,
+                  blur: CGFloat = 4,
+                  spread: CGFloat = 0) -> ViewBuilder {
+    shadowColor = color
+    shadowOpacity = alpha
+    shadowOffset = CGSize(width: x, height: y)
+    shadowRadius = blur / 2
+    self.spread = spread
+
     return self
   }
 }

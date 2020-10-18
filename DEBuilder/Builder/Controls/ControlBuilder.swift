@@ -18,20 +18,23 @@ public class ControlBuilder<Element: UIControl>: ViewBuilder<Element> {
   private var isHighlighted: Bool = false
   private var contentVerticalAlignment: UIControl.ContentVerticalAlignment = .top
   private var contentHorizontalAlignment: UIControl.ContentHorizontalAlignment = .center
-
   private var targets: [Target] = []
 
-  public override func build() -> Element {
+  // MARK: Builder Type
+
+  override public func build() -> Element {
     let element = super.build()
       .with(\.isEnabled, setTo: isEnabled)
       .with(\.isSelected, setTo: isSelected)
       .with(\.isHighlighted, setTo: isHighlighted)
+      .with(\.contentVerticalAlignment, setTo: contentVerticalAlignment)
+      .with(\.contentHorizontalAlignment, setTo: contentHorizontalAlignment)
 
-    for target in targets {
-      element.addTarget(target.0, action: target.1, for: target.2)
-    }
+    for target in targets { element.addTarget(target.0, action: target.1, for: target.2) }
     return element
   }
+
+  // MARK: Builder Method
 
   func withEnabled(_ isEnabled: Bool) -> ControlBuilder {
     self.isEnabled = isEnabled
