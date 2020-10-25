@@ -10,6 +10,8 @@ import UIKit
 public class ControlBuilder<Element: UIControl>: ViewBuilder<Element> {
 
   public typealias Target = (Any?, Selector, UIControl.Event)
+  public typealias States<Element> = [(Element?, UIControl.State)]
+  public typealias DividerStates = [(UIImage?, UIControl.State, UIControl.State)]
 
   // MARK: Properties
 
@@ -51,14 +53,16 @@ public class ControlBuilder<Element: UIControl>: ViewBuilder<Element> {
     return self
   }
 
-  public func withContentVerticalAlignment(_ alignment: UIControl.ContentVerticalAlignment)
-  -> ControlBuilder {
+  public func withContentVerticalAlignment(
+    _ alignment: UIControl.ContentVerticalAlignment
+  ) -> ControlBuilder {
     self.contentVerticalAlignment = alignment
     return self
   }
 
-  public func withContentHorizontalAlignment(_ alignment: UIControl.ContentHorizontalAlignment)
-  -> ControlBuilder {
+  public func withContentHorizontalAlignment(
+    _ alignment: UIControl.ContentHorizontalAlignment
+  ) -> ControlBuilder {
     self.contentHorizontalAlignment = alignment
     return self
   }

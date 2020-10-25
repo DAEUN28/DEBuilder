@@ -7,9 +7,7 @@
 
 import UIKit
 
-public class ButtonBuilder<Element: UIButton>: ViewBuilder<Element> {
-
-  public typealias States<Element> = [(Element?, UIControl.State)]
+public class ButtonBuilder<Element: UIButton>: ControlBuilder<Element> {
 
   // MARK: Propereties
 
@@ -72,8 +70,9 @@ public class ButtonBuilder<Element: UIButton>: ViewBuilder<Element> {
     return self
   }
 
-  public func withReversesTitleShadowWhenHighlighted(_ reversesTitleShadowWhenHighlighted: Bool)
-  -> ButtonBuilder {
+  public func withReversesTitleShadowWhenHighlighted(
+    _ reversesTitleShadowWhenHighlighted: Bool
+  ) -> ButtonBuilder {
     self.reversesTitleShadowWhenHighlighted = reversesTitleShadowWhenHighlighted
     return self
   }
