@@ -22,7 +22,7 @@ public class BarButtonItemBuilder<Element: UIBarButtonItem>: BarItemBuilder<Elem
   // MARK: BuilderType
 
   override public func build() -> Element {
-    let element = super.build()
+    return super.build()
       .with(\.target, setTo: target)
       .with(\.action, setTo: action)
       .with(\.style, setTo: style)
@@ -30,8 +30,6 @@ public class BarButtonItemBuilder<Element: UIBarButtonItem>: BarItemBuilder<Elem
       .with(\.width, setTo: width)
       .with(\.customView, setTo: customView)
       .with(\.tintColor, setTo: tintColor)
-
-    return element
   }
 
   // MARK: Builder Method
