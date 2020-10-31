@@ -37,7 +37,6 @@
 		BF7FBB46253C718F0044852B /* PageControlBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FBB24253C718E0044852B /* PageControlBuilder.swift */; };
 		BF7FBB47253C718F0044852B /* ScrollViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FBB26253C718E0044852B /* ScrollViewBuilder.swift */; };
 		BF7FBB48253C718F0044852B /* StackViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FBB27253C718E0044852B /* StackViewBuilder.swift */; };
-		BF7FBB49253C718F0044852B /* SearchTextFieldBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FBB29253C718E0044852B /* SearchTextFieldBuilder.swift */; };
 		BF7FBB4A253C718F0044852B /* ViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FBB2A253C718E0044852B /* ViewBuilder.swift */; };
 		BF7FBB51254581DB0044852B /* CollectionViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FBB50254581DB0044852B /* CollectionViewBuilder.swift */; };
 		BF7FBB56254586590044852B /* TableViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FBB55254586590044852B /* TableViewBuilder.swift */; };
@@ -74,7 +73,6 @@
 		BF7FBB24253C718E0044852B /* PageControlBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageControlBuilder.swift; sourceTree = "<group>"; };
 		BF7FBB26253C718E0044852B /* ScrollViewBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewBuilder.swift; sourceTree = "<group>"; };
 		BF7FBB27253C718E0044852B /* StackViewBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackViewBuilder.swift; sourceTree = "<group>"; };
-		BF7FBB29253C718E0044852B /* SearchTextFieldBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTextFieldBuilder.swift; sourceTree = "<group>"; };
 		BF7FBB2A253C718E0044852B /* ViewBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewBuilder.swift; sourceTree = "<group>"; };
 		BF7FBB50254581DB0044852B /* CollectionViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewBuilder.swift; sourceTree = "<group>"; };
 		BF7FBB55254586590044852B /* TableViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewBuilder.swift; sourceTree = "<group>"; };
@@ -130,7 +128,6 @@
 				BF7FBB25253C718E0044852B /* Container Views */,
 				BF7FBB0C253C718E0044852B /* Content Views */,
 				BF7FBB1C253C718E0044852B /* Controls */,
-				BF7FBB28253C718E0044852B /* Search Field */,
 				BF7FBB11253C718E0044852B /* Text Views */,
 				BF7FBB2A253C718E0044852B /* ViewBuilder.swift */,
 			);
@@ -195,14 +192,6 @@
 				BF7FBB55254586590044852B /* TableViewBuilder.swift */,
 			);
 			path = "Container Views";
-			sourceTree = "<group>";
-		};
-		BF7FBB28253C718E0044852B /* Search Field */ = {
-			isa = PBXGroup;
-			children = (
-				BF7FBB29253C718E0044852B /* SearchTextFieldBuilder.swift */,
-			);
-			path = "Search Field";
 			sourceTree = "<group>";
 		};
 		BFF0906C2534972800EDB30A = {
@@ -300,7 +289,6 @@
 				BF7FBB51254581DB0044852B /* CollectionViewBuilder.swift in Sources */,
 				BF7FBB32253C718F0044852B /* PickerViewBuilder.swift in Sources */,
 				BF7FBB43253C718F0044852B /* DatePickerViewBuilder.swift in Sources */,
-				BF7FBB49253C718F0044852B /* SearchTextFieldBuilder.swift in Sources */,
 				BF7FBB48253C718F0044852B /* StackViewBuilder.swift in Sources */,
 				BF7FBB3B253C718F0044852B /* SearchBarBuilder.swift in Sources */,
 				BF7FBB4A253C718F0044852B /* ViewBuilder.swift in Sources */,
