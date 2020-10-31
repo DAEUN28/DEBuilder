@@ -13,26 +13,98 @@ public extension UIView {
 
 // MARK: Bars
 
+public extension UINavigationBar {
+  typealias Builder = NavigationBarBuilder
+}
+
+public extension UIToolbar {
+  typealias Builder = ToolbarBuilder
+}
+
+public extension UISearchBar {
+  typealias Builder = TabBarBuilder
+}
+
+public extension UITabBar {
+  typealias Builder = ViewBuilder
+}
+
+public extension UIBarItem {
+  typealias Builder = BarItemBuilder
+}
+
+public extension UIBarButtonItem {
+  typealias Builder = BarButtonItemBuilder
+}
+
 // MARK: Container Views
+
+public extension UIScrollView {
+  typealias Builder = ScrollViewBuilder
+}
 
 public extension UIStackView {
   typealias Builder = StackViewBuilder
 }
 
+public extension UICollectionView {
+  typealias Builder = CollectionViewBuilder
+}
+
+public extension UITableView {
+  typealias Builder = TableViewBuilder
+}
+
 // MARK: Content Views
+
+public extension UIActivityIndicatorView {
+  typealias Builder = ActivityIndicatorViewBuilder
+}
 
 public extension UIImageView {
   typealias Builder = ImageViewBuilder
 }
 
+public extension UIPickerView {
+  typealias Builder = PickerViewBuilder
+}
+
+public extension UIProgressView {
+  typealias Builder = ProgressViewBuilder
+}
+
 // MARK: Controls
+
+public extension UIButton {
+  typealias Builder = ButtonBuilder
+}
 
 public extension UIControl {
   typealias Builder = ControlBuilder
 }
 
-public extension UIButton {
-  typealias Builder = ButtonBuilder
+public extension UIDatePicker {
+  typealias Builder = DatePickerBuilder
+}
+
+public extension UIPageControl {
+  typealias Builder = PageControlBuilder
+}
+
+public extension UISegmentedControl {
+  typealias Builder = SegmentedControlBuilder
+}
+
+public extension UISlider {
+  typealias Builder = SliderBuilder
+}
+
+public extension UIStepper {
+  typealias Builder = StepperBuilder
+}
+
+public extension UISwitch {
+  typealias Builder = SwitchBuilder
 }
 
 // MARK: Text Views
@@ -43,4 +115,8 @@ public extension UILabel {
 
 public extension UITextField {
   typealias Builder = TextFieldBuilder
+}
+
+public extension UITextView {
+  typealias Builder = TextViewBuilder
 }

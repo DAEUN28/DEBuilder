@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class DatePickerViewBuilder<Element: UIDatePicker>: ControlBuilder<Element> {
+public class DatePickerBuilder<Element: UIDatePicker>: ControlBuilder<Element> {
 
   // MARK: Property
 
@@ -38,47 +38,47 @@ public class DatePickerViewBuilder<Element: UIDatePicker>: ControlBuilder<Elemen
 
   // MARK: Builder Method
 
-  public func withCalendar(_ calendar: Calendar?) -> DatePickerViewBuilder {
+  public func withCalendar(_ calendar: Calendar?) -> DatePickerBuilder {
     self.calendar = calendar
     return self
   }
 
-  public func withDate(_  date: Date) -> DatePickerViewBuilder {
+  public func withDate(_  date: Date) -> DatePickerBuilder {
     self.date = date
     return self
   }
 
-  public func withLocale(_ locale: Locale?) -> DatePickerViewBuilder {
+  public func withLocale(_ locale: Locale?) -> DatePickerBuilder {
     self.locale = locale
     return self
   }
 
-  public func withTimeZone(_ timeZone: TimeZone?) -> DatePickerViewBuilder {
+  public func withTimeZone(_ timeZone: TimeZone?) -> DatePickerBuilder {
     self.timeZone = timeZone
     return self
   }
 
-  public func withDatePickerMode(_ datePickerMode: UIDatePicker.Mode) -> DatePickerViewBuilder {
+  public func withDatePickerMode(_ datePickerMode: UIDatePicker.Mode) -> DatePickerBuilder {
     self.datePickerMode = datePickerMode
     return self
   }
 
-  public func withMaximumDate(_ maximumDate: Date?) -> DatePickerViewBuilder {
+  public func withMaximumDate(_ maximumDate: Date?) -> DatePickerBuilder {
     self.maximumDate = maximumDate
     return self
   }
 
-  public func withMinimumDate(_ minimumDate: Date?) -> DatePickerViewBuilder {
+  public func withMinimumDate(_ minimumDate: Date?) -> DatePickerBuilder {
     self.minimumDate = minimumDate
     return self
   }
 
-  public func withMinuteInterval(_  minuteInterval: Int) -> DatePickerViewBuilder {
+  public func withMinuteInterval(_  minuteInterval: Int) -> DatePickerBuilder {
     self.minuteInterval = minuteInterval
     return self
   }
 
-  public func withCountDownDuration(_ countDownDuration: TimeInterval) -> DatePickerViewBuilder {
+  public func withCountDownDuration(_ countDownDuration: TimeInterval) -> DatePickerBuilder {
     self.countDownDuration = countDownDuration
     return self
   }

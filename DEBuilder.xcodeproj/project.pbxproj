@@ -31,7 +31,7 @@
 		BF7FBB40253C718F0044852B /* SwitchBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FBB1E253C718E0044852B /* SwitchBuilder.swift */; };
 		BF7FBB41253C718F0044852B /* StepperBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FBB1F253C718E0044852B /* StepperBuilder.swift */; };
 		BF7FBB42253C718F0044852B /* SegmentedControlBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FBB20253C718E0044852B /* SegmentedControlBuilder.swift */; };
-		BF7FBB43253C718F0044852B /* DatePickerViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FBB21253C718E0044852B /* DatePickerViewBuilder.swift */; };
+		BF7FBB43253C718F0044852B /* DatePickerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FBB21253C718E0044852B /* DatePickerBuilder.swift */; };
 		BF7FBB44253C718F0044852B /* SliderBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FBB22253C718E0044852B /* SliderBuilder.swift */; };
 		BF7FBB45253C718F0044852B /* ButtonBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FBB23253C718E0044852B /* ButtonBuilder.swift */; };
 		BF7FBB46253C718F0044852B /* PageControlBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7FBB24253C718E0044852B /* PageControlBuilder.swift */; };
@@ -67,7 +67,7 @@
 		BF7FBB1E253C718E0044852B /* SwitchBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchBuilder.swift; sourceTree = "<group>"; };
 		BF7FBB1F253C718E0044852B /* StepperBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepperBuilder.swift; sourceTree = "<group>"; };
 		BF7FBB20253C718E0044852B /* SegmentedControlBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentedControlBuilder.swift; sourceTree = "<group>"; };
-		BF7FBB21253C718E0044852B /* DatePickerViewBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerViewBuilder.swift; sourceTree = "<group>"; };
+		BF7FBB21253C718E0044852B /* DatePickerBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerBuilder.swift; sourceTree = "<group>"; };
 		BF7FBB22253C718E0044852B /* SliderBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderBuilder.swift; sourceTree = "<group>"; };
 		BF7FBB23253C718E0044852B /* ButtonBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonBuilder.swift; sourceTree = "<group>"; };
 		BF7FBB24253C718E0044852B /* PageControlBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageControlBuilder.swift; sourceTree = "<group>"; };
@@ -103,11 +103,11 @@
 		BF7FBB02253C718E0044852B /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				BF7FBB03253C718E0044852B /* UIView+DEBuilder.swift */,
-				BF7FBB04253C718E0044852B /* UIView+BuilderType.swift */,
-				BF7FBB05253C718E0044852B /* NSObject+DEBuilder.swift */,
 				BF7FBB06253C718E0044852B /* CALayer+DEBuilder.swift */,
+				BF7FBB05253C718E0044852B /* NSObject+DEBuilder.swift */,
 				BF7FBB07253C718E0044852B /* UIStackView+DEBuilder.swift */,
+				BF7FBB04253C718E0044852B /* UIView+BuilderType.swift */,
+				BF7FBB03253C718E0044852B /* UIView+DEBuilder.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -137,10 +137,10 @@
 		BF7FBB0C253C718E0044852B /* Content Views */ = {
 			isa = PBXGroup;
 			children = (
+				BF7FBB10253C718E0044852B /* ActivityIndicatorViewBuilder.swift */,
+				BF7FBB0F253C718E0044852B /* ImageViewBuilder.swift */,
 				BF7FBB0D253C718E0044852B /* PickerViewBuilder.swift */,
 				BF7FBB0E253C718E0044852B /* ProgressViewBuilder.swift */,
-				BF7FBB0F253C718E0044852B /* ImageViewBuilder.swift */,
-				BF7FBB10253C718E0044852B /* ActivityIndicatorViewBuilder.swift */,
 			);
 			path = "Content Views";
 			sourceTree = "<group>";
@@ -148,9 +148,9 @@
 		BF7FBB11253C718E0044852B /* Text Views */ = {
 			isa = PBXGroup;
 			children = (
+				BF7FBB14253C718E0044852B /* LabelBuilder.swift */,
 				BF7FBB12253C718E0044852B /* TextFieldBuilder.swift */,
 				BF7FBB13253C718E0044852B /* TextViewBuilder.swift */,
-				BF7FBB14253C718E0044852B /* LabelBuilder.swift */,
 			);
 			path = "Text Views";
 			sourceTree = "<group>";
@@ -158,12 +158,12 @@
 		BF7FBB15253C718E0044852B /* Bars */ = {
 			isa = PBXGroup;
 			children = (
+				BF7FBB1B253C718E0044852B /* BarButtonItemBuilder.swift */,
+				BF7FBB1A253C718E0044852B /* BarItemBuilder.swift */,
 				BF7FBB16253C718E0044852B /* NavigationBarBuilder.swift */,
-				BF7FBB17253C718E0044852B /* ToolbarBuilder.swift */,
 				BF7FBB18253C718E0044852B /* SearchBarBuilder.swift */,
 				BF7FBB19253C718E0044852B /* TabBarBuilder.swift */,
-				BF7FBB1A253C718E0044852B /* BarItemBuilder.swift */,
-				BF7FBB1B253C718E0044852B /* BarButtonItemBuilder.swift */,
+				BF7FBB17253C718E0044852B /* ToolbarBuilder.swift */,
 			);
 			path = Bars;
 			sourceTree = "<group>";
@@ -171,14 +171,14 @@
 		BF7FBB1C253C718E0044852B /* Controls */ = {
 			isa = PBXGroup;
 			children = (
-				BF7FBB1D253C718E0044852B /* ControlBuilder.swift */,
-				BF7FBB1E253C718E0044852B /* SwitchBuilder.swift */,
-				BF7FBB1F253C718E0044852B /* StepperBuilder.swift */,
-				BF7FBB20253C718E0044852B /* SegmentedControlBuilder.swift */,
-				BF7FBB21253C718E0044852B /* DatePickerViewBuilder.swift */,
-				BF7FBB22253C718E0044852B /* SliderBuilder.swift */,
 				BF7FBB23253C718E0044852B /* ButtonBuilder.swift */,
+				BF7FBB1D253C718E0044852B /* ControlBuilder.swift */,
+				BF7FBB21253C718E0044852B /* DatePickerBuilder.swift */,
 				BF7FBB24253C718E0044852B /* PageControlBuilder.swift */,
+				BF7FBB20253C718E0044852B /* SegmentedControlBuilder.swift */,
+				BF7FBB22253C718E0044852B /* SliderBuilder.swift */,
+				BF7FBB1F253C718E0044852B /* StepperBuilder.swift */,
+				BF7FBB1E253C718E0044852B /* SwitchBuilder.swift */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -186,9 +186,9 @@
 		BF7FBB25253C718E0044852B /* Container Views */ = {
 			isa = PBXGroup;
 			children = (
+				BF7FBB50254581DB0044852B /* CollectionViewBuilder.swift */,
 				BF7FBB26253C718E0044852B /* ScrollViewBuilder.swift */,
 				BF7FBB27253C718E0044852B /* StackViewBuilder.swift */,
-				BF7FBB50254581DB0044852B /* CollectionViewBuilder.swift */,
 				BF7FBB55254586590044852B /* TableViewBuilder.swift */,
 			);
 			path = "Container Views";
@@ -288,7 +288,7 @@
 				BF7FBB38253C718F0044852B /* LabelBuilder.swift in Sources */,
 				BF7FBB51254581DB0044852B /* CollectionViewBuilder.swift in Sources */,
 				BF7FBB32253C718F0044852B /* PickerViewBuilder.swift in Sources */,
-				BF7FBB43253C718F0044852B /* DatePickerViewBuilder.swift in Sources */,
+				BF7FBB43253C718F0044852B /* DatePickerBuilder.swift in Sources */,
 				BF7FBB48253C718F0044852B /* StackViewBuilder.swift in Sources */,
 				BF7FBB3B253C718F0044852B /* SearchBarBuilder.swift in Sources */,
 				BF7FBB4A253C718F0044852B /* ViewBuilder.swift in Sources */,
