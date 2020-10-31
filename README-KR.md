@@ -3,7 +3,9 @@
 [![License](https://img.shields.io/cocoapods/l/DEBuilder.svg?style=flat)](https://cocoapods.org/pods/DEBuilder)
 [![Platform](https://img.shields.io/cocoapods/p/DEBuilder.svg?style=flat)](https://cocoapods.org/pods/DEBuilder)
 
-UIKit의 [Views and Controls](https://developer.apple.com/documentation/uikit/views_and_controls) 을 가장 편리하게 생성할 수 있는 라이브러리
+UIKit의 [Views and Controls](https://developer.apple.com/documentation/uikit/views_and_controls) Builder를 기본적으로 제공합니다.
+
+또한 상속을 통해 Custom 객체도 편리하게 생성할 수 있습니다.
 
 
 
