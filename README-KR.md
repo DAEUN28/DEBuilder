@@ -57,7 +57,7 @@ let customButton = ButtonBuilder<CustomButton>
 
 NSObject를 상속받는 객체들은 기본적으로 keypath를 사용해 preperty를 set할 수 있습니다.
 
-Builder를 사용해 객체를 생성한 이후에도 다음과 같이 with 메서드를 사용해 Builder가 제공하지 않는 property를 set할 수 있습니다.
+Builder를 사용해 객체를 생성한 이후에도 다음과 같이 `with` 메서드를 사용해 Builder가 제공하지 않는 property를 set할 수 있습니다.
 
 ```swift
 let label = UILabel.Builder()
@@ -68,7 +68,7 @@ let label = UILabel.Builder()
   .with(\.textAlignment, setTo: textAlignment)
 ```
 
-Custom Class가 NSObject를 상속하지 않을 때는 다음과 같이 With 프로토콜을 채택할 수 있습니다.
+Custom Class가 NSObject를 상속하지 않을 때는 다음과 같이 `With` 프로토콜을 채택할 수 있습니다.
 
 ```swift
 class CustomClass: With {
@@ -104,7 +104,7 @@ class CustomLabelBuilder: LabelBuilder<CustomLabel> {
 }
 ```
 
-상속받을 Builder가 없는 경우에는 BuilderType을 채택해 직접 Custom Builder를 구현할 수 있습니다.
+상속받을 Builder가 없는 경우에는 `BuilderType`을 채택해 직접 Custom Builder를 구현할 수 있습니다.
 
 ```swift
 class CustomObject {
