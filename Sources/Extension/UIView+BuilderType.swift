@@ -22,11 +22,11 @@ public extension UIToolbar {
 }
 
 public extension UISearchBar {
-  typealias Builder = TabBarBuilder
+  typealias Builder = SearchBarBuilder
 }
 
 public extension UITabBar {
-  typealias Builder = ViewBuilder
+  typealias Builder = TabBarBuilder
 }
 
 public extension UIBarItem {
