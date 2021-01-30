@@ -8,9 +8,8 @@
 import UIKit
 
 extension CALayer {
-
   public func roundCorners(_ radius: CGFloat, _ maskedCorners: CACornerMask? = nil) {
-    self.cornerRadius = radius
+    cornerRadius = radius
     if let corners = maskedCorners { self.maskedCorners = corners }
   }
 }

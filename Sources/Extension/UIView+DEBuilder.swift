@@ -9,8 +9,6 @@ import UIKit
 
 public extension UIView {
   func addSubviews(_ views: [UIView]) {
-    for view in views {
-      self.addSubview(view)
-    }
+    views.forEach { self.addSubview($0) }
   }
 }
