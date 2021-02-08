@@ -24,9 +24,9 @@ public class TextFieldBuilder<Element: UITextField>: ControlBuilder<Element> {
   private var clearsOnInsertion = false
   private var borderStyle: UITextField.BorderStyle = .none
   private var clearButtonMode: UITextField.ViewMode = .never
-  private var leftView: UIView?
+  private weak var leftView: UIView?
   private var leftViewMode: UITextField.ViewMode = .never
-  private var rightView: UIView?
+  private weak var rightView: UIView?
   private var rightViewMode: UITextField.ViewMode = .never
 
   private var keyboardType: UIKeyboardType = .default
